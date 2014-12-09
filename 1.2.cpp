@@ -13,11 +13,12 @@ int main(void)
   cin>>x>>y;
   cout<<"Введите координаты Слона: ";
   cin>>g>>h;
-  if (a=b)
+  if (a==x)
     cout<<"Угроза Королю";
-  if (x=y)
+  if (b==y)
     cout<<"Угоза Королю";
-  if ((a-g)=(b-h))
+  if ((a-g)==(b-h))
     cout<<"Угроза королю";
+  if 
   return 0;
 }

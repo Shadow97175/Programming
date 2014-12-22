@@ -64,22 +64,22 @@ int main()
 			}
 			if (i+1<N && j+1<N)
 			{
-				summ += A[i + 1][j + 1];
+				summ+=A[i+1][j+1];
 				count++;
 			}
-			summ += A[i][j];
-			A[i][j] = summ / count;
+			summ+=A[i][j];
+			A[i][j]=summ/count;
 		}
 	}
 
-	cout << "Ìàòðèöà ïîñëå ïðåîáðàçîâàíèÿ:" << endl;
-	for (int i = 0; i < N; i++)
+	cout<<"Ìàòðèöà ïîñëå ïðåîáðàçîâàíèÿ: "<<endl;
+	for (int i=0; i<N; i++)
 	{
-		for (int j = 0; j < N; j++)
+		for (int j=0; j<N; j++)
 		{
-			cout << A[i][j] << " ";
+			cout<<A[i][j]<<" ";
 		}
-		cout << endl;
+		cout<<endl;
 	}
 
 	system("pause");

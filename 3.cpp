@@ -7,6 +7,7 @@ Programming
 */
 
 #include "stdafx.h"
+#include <iostream>
 #define N	5
 using namespace std;
 

@@ -1,6 +1,7 @@
 Programming
 ===========
 #include <iostream>
+#include <cmath>
 using namespace std;
 
 int main(void)
@@ -17,7 +18,7 @@ int main(void)
     cout<<"Угроза Королю";
   if (b==y)
     cout<<"Угоза Королю";
-  if ((a-g)==(b-h))
+  if (abs(a-g)==abs(b-h))
     cout<<"Угроза королю";
   if (8<a && a<1)
     cout<<"Неверные координаты";

@@ -44,7 +44,7 @@ Programming
                                     count++;
                             }
                             //      слева
-                            if (j-1 > 0)
+                            if (j-1>0)
                             {
                                     summ+=safeA[i][j-1];
                                     count++;

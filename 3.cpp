@@ -6,12 +6,11 @@ Programming
 	принимает во внимание изменения предыдущей.
 */
 
-#include "stdafx.h"
 #include <iostream>
-#define N	5
+#define N 5
 using namespace std;
 
-int main()
+int main(void)
 {
 	setlocale(0, "Russian");
 	int A[N][N];
@@ -23,7 +22,6 @@ int main()
 			cin>>A[i][j];
 		}
 	}
-
 	for (int i=0; i<N; i++)
 	{
 		for (int j=0, summ=0, count=1; j<N; j++)
@@ -72,7 +70,6 @@ int main()
 			A[i][j]=summ/count;
 		}
 	}
-
 	cout<<"Матрица после преобразования: "<<endl;
 	for (int i=0; i<N; i++)
 	{
@@ -82,7 +79,5 @@ int main()
 		}
 		cout<<endl;
 	}
-
-	system("pause");
-	return false;
+	return 0;
 }

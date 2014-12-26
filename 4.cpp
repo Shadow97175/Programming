@@ -14,7 +14,7 @@ int main(void)
 	cin>>s;
 	for (int i=0; i<strlen(s); i++)
 	{	
-		if (s[i]>='À' && s[i]<='ÿ')			count[(('z'-'A')+1+(s[i]-'À'))]++;	
+		if (s[i]>='À' && s[i]<='ÿ')			count[(ENG_CHARS*2+1+(s[i]-'À'))]++; // ENG_CHARS*2='z'-'A'	
 		else if (s[i]>='A' && s[i]<='z')	count[(s[i]-'A')]++;						
 	}
 	char a;

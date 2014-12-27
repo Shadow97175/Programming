@@ -1,5 +1,3 @@
-Programming
-===========
 #include "stdafx.h"
 
 class Line {

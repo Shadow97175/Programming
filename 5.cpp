@@ -40,11 +40,11 @@ int main()
 	cin >> x >> y >> z;
 	line2.SetXYZ(x, y, z);
 
-	cout << "Ïðÿìàÿ 1 è 2 " << (line1.intersection(line2) ? "ïåðåñåêàþòñÿ" : "íå ïåðåñåêàþòñÿ") << endl;
-	cout << "Ïðÿìàÿ 1 è 2 " << (line1.intersection(line2) ? "ëåæàò" : "íå ëåæàò") << " â îäíîé ïëîñêîñòè" << endl;
-	cout << "Òî÷êà A(0, 6, 2) " << (line1.pointOnLine(0, 6, 2) ? "ëåæèò" : "íå ëåæèò") << " íà ïðÿìîé 1" << endl;
+	cout << "Ïðÿìàÿ 1 è 2 " << (line1.intersection(line2) ? "пересекаются" : "не пересекаются") << endl;
+	cout << "Ïðÿìàÿ 1 è 2 " << (line1.intersection(line2) ? "лежат" : "не лежат") << " в одной плоскости" << endl;
+	cout << "Òî÷êà A(0, 6, 2) " << (line1.pointOnLine(0, 6, 2) ? "лежит" : "не лежит") << " на прямой 1" << endl;
 
-	cout << "Ïðÿìàÿ 1:\n" << line1 << "Ïðÿìàÿ 2:\n" << line2 << endl;
+	cout << "Прямая 1:\n" << line1 << "Прямая 2:\n" << line2 << endl;
 
 	system("pause");
 	return 0;

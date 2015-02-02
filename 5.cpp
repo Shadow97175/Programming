@@ -11,7 +11,7 @@ int main()
 	setlocale(LC_ALL, "russian");
 
 	// Первая прямая
-	int a1, b1, c1, d1, a2, b2, c2, d2;
+	int a1, b1, c1, d1, a2, b2, c2, d2, x1, y1, z1, x2, y2, z2;
 	cout << "Введите a1, b1, c1, d1, a2, b2, c2, d2 для первой прямой: " << endl;
 	cin >> a1 >> b1 >> c1 >> d1 >> a2 >> b2 >> c2 >> d2;
 	Line line1(a1, b1, c1, d1, a2, b2, c2, d2);

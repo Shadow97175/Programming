@@ -21,6 +21,10 @@ int main()
 		cin >> a1 >> b1 >> c1 >> d1 >> a2 >> b2 >> c2 >> d2;
 		line1.Set(a1, b1, c1, d1, a2, b2, c2, d2);
 	}
+	cout « "Введите X, Y, Z для первой прямой: " « endl;
+	int x, y, z;
+	cin » x » y » z;
+	line1.SetXYZ(x, y, z);
 
 	// Вторая прямая
 	cout << "Введите a1, b1, c1, d1, a2, b2, c2, d2 для второй прямой: " << endl;

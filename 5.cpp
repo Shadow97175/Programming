@@ -11,7 +11,7 @@ int main()
 	setlocale(LC_ALL, "russian");
 
 	// Первая прямая
-	int a1, b1, c1, d1, a2, b2, c2, d2, x, y, z;
+	int a1, b1, c1, d1, a2, b2, c2, d2;
 	cout << "Введите a1, b1, c1, d1, a2, b2, c2, d2 для первой прямой: " << endl;
 	cin >> a1 >> b1 >> c1 >> d1 >> a2 >> b2 >> c2 >> d2;
 	Line line1(a1, b1, c1, d1, a2, b2, c2, d2);
@@ -22,9 +22,9 @@ int main()
 		line1.Set(a1, b1, c1, d1, a2, b2, c2, d2);
 	}
 	cout « "Введите X, Y, Z для первой прямой: " « endl;
-	int x1, y1, z1;
-	cin » x1 » y1 » z1;
-	line1.SetXYZ(x1, y1, z1);
+	int x, y, z;
+	cin » x » y » z;
+	line1.SetXYZ(x, y, z);
 
 	// Вторая прямая
 	cout << "Введите a1, b1, c1, d1, a2, b2, c2, d2 для второй прямой: " << endl;

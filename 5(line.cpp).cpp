@@ -1,6 +1,6 @@
 #include "stdafx.h"
 
-Line::Line(int a1, int b1, int c1, int d1, int a2, int b2, int c2, int d2)
+Line::Line(int a1, b1, c1, d1, a2, b2, c2, d2)
 {
 	Set(a1, b1, c1, d1, a2, b2, c2, d2);
 }
@@ -15,7 +15,7 @@ Line::~Line()
 
 }
 
-bool Line::Set(int a1, int b1, int c1, int d1, int a2, int b2, int c2, int d2)
+bool Line::Set(int a1, b1, c1, d1, a2, b2, c2, d2)
 {
 	double r1 = (double)a1 / (double)a2;
 	double r2 = (double)b1 / (double)b2;
@@ -35,7 +35,7 @@ bool Line::isset()
 	return exist;
 }
 
-bool Line::SetXYZ(int x, int y, int z)
+bool Line::SetXYZ(int x, y, z)
 {
 	if (exist)
 	{
@@ -69,7 +69,7 @@ bool Line::coplanar(const Line& l)
 	return ((this->x == l.x && this->y == l.y) || (this->x == l.x && this->z == l.z) || (this->y == l.y && this->z == l.z));
 }
 
-bool Line::pointOnLine(int x, int y, int z)
+bool Line::pointOnLine(int x, y, z)
 {
 	return (this->x == x && this->y == y && this->z == z) ? true : false;
 }

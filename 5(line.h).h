@@ -4,7 +4,7 @@ class Line {
 	friend std::ostream &operator<< (std::ostream &os, const Line &);
 
 public:
-	Line(int, int, int, int, int, int, int, int);
+	Line(int);
 	Line(const Line&);
 	~Line();
 

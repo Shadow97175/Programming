@@ -84,7 +84,7 @@ std::ostream &operator<< (std::ostream &os, const Line &l)
 	}
 	else
 	{
-		os << "Ïðÿìàÿ íå çàäàíà.\n";
+		os << "Прямая не задана.\n";
 	}
 	return os;
 }

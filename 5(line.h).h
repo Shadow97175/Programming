@@ -20,7 +20,7 @@ public:
 	bool pointOnLine(int);
 
 private:
-	int a1, b1, c1, d1, a2, b2, c2, d2;
+	int a1, b1, c1, m1, n1, p1, a2, b2, c2, m2, n2, p2;
 	int x, y, z;
 	bool exist;
 };

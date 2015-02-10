@@ -1,14 +1,10 @@
 #include <iostream>
 
-Line::line1(int a1, b1, c1, m1, n1, p1)
+Line::Line(int a1, b1, c1, m1, n1, p1)
 {
 	Set(a1, b1, c1, m1, n1, p1);
 }
 
-Line::line2(int a2, b2, c2, m2, n2, p2)
-{
-	Set(a2, b2, c2, m2, n2, p2);
-}
 Line::Line(const Line& l)
 {
 
@@ -52,7 +48,6 @@ const Line &Line::operator= (const Line &l)
 		if (exist)
 		{
 			this->a1 = l.a1; this->b1 = l.b1; this->c1 = l.c1; this->m1 = l.m1; this->n1 = l.n1; this->p1 = l.p1;
-			this->a2 = l.a2; this->b2 = l.b2; this->c2 = l.c2; this->m2 = l.m2; this->n2 = l.n2; this->p2 = l.p2;
 			exist = true;
 		}
 	}
@@ -62,12 +57,12 @@ const Line &Line::operator= (const Line &l)
 bool Line::intersection(const Line& l)
 
 {
-	return (this.coplanar(l) && (m1/m2) == (n1/n2) && (n1/n2) == (p1/p2) && (m1/m2) == (p1/p2)) ? false : true;
+	return (this.coplanar(l) && (m1/l.m1) == (n1/l.n1) && (n1/l.n1) == (p1/l.p1) && (m1/l.m1) == (p1/l.p1)) ? false : true;
 }
 
 bool Line::coplanar(const Line& l)
 {
-	return (((a2 - a1) * n1 * p2 + (b2 - b1) * p1 * m2 + (c2 - c1) * m1 * n2 - (c2 - c1) * n1 * m2 + (a2 - a1) * p1 * n2 + (b2 - b1) * m1 * p2) == 0) ? true : false;
+	return (((l.a1 - a1) * n1 * l.p1 + (l.b1 - b1) * p1 * l.m1 + (l.c1 - c1) * m1 * l.n1 - (l.c1 - c1) * n1 * l.m1 + (l.a1 - a1) * p1 * l.n1 + (l.b1 - b1) * m1 * l.p1) == 0) ? true : false;
 } 
 
 bool Line::pointOnLine(int x, y, z)
@@ -80,7 +75,6 @@ std::ostream &operator<< (std::ostream &os, const Line &l)
 	if (l.exist)
 	{
 		os << "a1: " << l.a1 << ", b1: " << l.b1 << ", c1: " << l.c1 << ", m1: " << l.m1 << ", n1: " << l.n1 << ", p1: " << l.p1 << "\n";
-		os << "a2: " << l.a2 << ", b2: " << l.b2 << ", c2: " << l.c2 << ", m2: " << l.m2 << ", n2: " << l.n2 << ", p2: " << l.p2 << "\n";
 		os << "X: " << l.x << ", Y: " << l.y << ", Z: " << l.z << "\n";
 	}
 	else

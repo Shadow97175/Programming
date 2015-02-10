@@ -1,10 +1,14 @@
 #include <iostream>
 
-Line::Line(int a1, b1, c1, m1, n1, p1, a2, b2, c2, m2, n2, p2)
+Line::line1(int a1, b1, c1, m1, n1, p1)
 {
-	Set(a1, b1, c1, m1, n1, p1, a2, b2, c2, m2, n2, p2);
+	Set(a1, b1, c1, m1, n1, p1);
 }
 
+Line::line2(int a2, b2, c2, m2, n2, p2)
+{
+	Set(a2, b2, c2, m2, n2, p2);
+}
 Line::Line(const Line& l)
 {
 
@@ -15,12 +19,11 @@ Line::~Line()
 
 }
 
-bool Line::Set(int a1, b1, c1, m1, n1, p1, a2, b2, c2, m2, n2, p2)
+bool Line::Set(int a1, b1, c1, m1, n1, p1)
 {
-		if ((x-a1)/m1) == ((y-b1)/n1)) == ((z-c1)/p1)
+		if (((x-a1)/m1) == ((y-b1)/n1)) && (((y-b1)/n1) == ((z-c1)/p1)) && (((x-a1)/m1) == ((z-c1)/p1))
 	{
 		this->a1 = a1; this->b1 = b1; this->c1 = c1; this->m1 = m1; this->n1 = n1; this->p1 = p1;
-		this->a2 = a2; this->b2 = b2; this->c2 = c2; this->m2 = m2; this->n2 = n2; this->p2 = p2;
 		exist = true;
 		return true;
 	}

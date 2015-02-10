@@ -36,7 +36,7 @@ int main()
 	}
 	
 	cout << "Прямая 1 и 2 " << (line1.intersection(line2) ? "пересекаются" : "не пересекаются") << endl;
-	cout << "Прямая 1 и 2 " << (line1.intersection(line2) ? "лежат" : "не лежат") << " в одной плоскости" << endl;
+	cout << "Прямая 1 и 2 " << (line1.coplanar(line2) ? "лежат" : "не лежат") << " в одной плоскости" << endl;
 	cout << "Точка A(0, 6, 2) " << (line1.pointOnLine(0, 6, 2) ? "лежит" : "не лежит") << " на прямой 1" << endl;
 
 	cout << "Прямая 1:\n" << line1 << "Прямая 2:\n" << line2 << endl;

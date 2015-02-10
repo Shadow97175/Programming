@@ -4,8 +4,7 @@ class Line {
 	friend std::ostream &operator<< (std::ostream &os, const Line &);
 
 public:
-	Line(int, int, int, int, int, int);
-	Line(int, int, int, int, int, int);
+	Line(int, int, int, int, int, int, int, int, int, int, int, int);
 	Line(const Line&);
 	~Line();
 
@@ -14,8 +13,7 @@ public:
 	bool isset();
 	bool SetXYZ(int, int, int);
 
-	bool Set(int, int, int, int, int, int);
-	bool Set(int, int, int, int, int, int);
+	bool Set(int, int, int, int, int, int, int, int, int, int, int, int);
 
 	bool intersection(const Line&);
 	bool coplanar(const Line&);

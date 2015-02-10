@@ -17,28 +17,12 @@ Line::~Line()
 
 bool Line::Set(int a1, b1, c1, m1, n1, p1)
 {
-		if (((x-a1)/m1) == ((y-b1)/n1)) && (((y-b1)/n1) == ((z-c1)/p1)) && (((x-a1)/m1) == ((z-c1)/p1))
-	{
-		this->a1 = a1; this->b1 = b1; this->c1 = c1; this->m1 = m1; this->n1 = n1; this->p1 = p1;
-		exist = true;
-		return true;
-	}
-	return false;
+
 }
 
 bool Line::isset()
 {
 	return exist;
-}
-
-bool Line::SetXYZ(int x, y, z)
-{
-	if (exist)
-	{
-	this->x = x; this->y = y; this->z = z;
-	return true;
-	}
-	return false;
 }
 
 const Line &Line::operator= (const Line &l)

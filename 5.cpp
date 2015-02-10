@@ -26,6 +26,10 @@ int main()
 	cin >> m1 >> n1 >> p1;
 	Line line2(a1, b1, c1, m1, n1, p1);
 
+	// Точка
+	cout << "Введите координаты точки: " << endl;
+	cin >> x >> y >> z;
+	
 	cout << "Прямая 1 и 2 " << (line1.intersection(line2) ? "пересекаются" : "не пересекаются") << endl;
 	cout << "Прямая 1 и 2 " << (line1.coplanar(line2) ? "лежат" : "не лежат") << " в одной плоскости" << endl;
 	cout << "Точка A " << (line1.pointOnLine(point) ? "лежит" : "не лежит") << " на прямой 1" << endl;

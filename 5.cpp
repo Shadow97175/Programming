@@ -28,16 +28,15 @@ int main()
 	line1.SetXYZ(x, y, z);
 
 	// Вторая прямая
-	int a2, b2, c2, m2, n2, p2;
 	cout << "Введите a, b, c, m, n, p для второй прямой: " << endl;
-	cin >> a2 >> b2 >> c2 >> m2 >> n2 >> p2;
+	cin >> a1 >> b1 >> c1 >> d1 >> m1 >> n1 >> p1;
 	Line line2(a2, b2, c2, m2, n2, p2);
 	
 	while (line2.isset() == false)
 	{
 		cout << "Прямая не создана, повторите ввод: " << endl;
 		cin >> a2 >> b2 >> c2 >> m2 >> n2 >> p2;
-		line2.Set(a2, b2, c2, m2, n2, p2);
+		line2.Set(a1, b1, c1, m1, n1, p1);
 	}
 	
 	cout << "Введите X, Y, Z для второй прямой: " << endl;

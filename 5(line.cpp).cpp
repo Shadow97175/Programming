@@ -8,7 +8,7 @@ Line::Line(int a1, b1, c1, m1, n1, p1)
 Line::Line(const Line& l)
 {
 
-	*this = l;
+	*this = a1=l.a1, b1=l.b1, c1=l.c1, m1=l.m1, n1=l.n1, p1=l.p1;
 }
 Line::~Line()
 {

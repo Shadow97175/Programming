@@ -26,6 +26,16 @@ bool Line::isset()
 	return exist;
 }
 
+bool Line::SetXYZ(int x, y, z)
+{
+	if (exist)
+	{
+		this->x = x;	this->y = y;	this->z = z;
+		return true;
+	}
+	return false;
+}
+
 const Line &Line::operator= (const Line &l)
 {
 	if (&l != this)
@@ -51,7 +61,7 @@ bool Line::coplanar(const Line& l)
 
 bool Line::pointOnLine(int x, y, z)
 {
-	return (this->x == x && this->y == y && this->z == z) ? true : false;
+	return (((x-a1)/m1 == (y-b1)/n1) && ((y-b1)/n1 == (z-c1)/p1) && ((x-a1)/m1 == (z-c1)/p1)) ? true : false;
 }
 
 std::ostream &operator<< (std::ostream &os, const Line &l)

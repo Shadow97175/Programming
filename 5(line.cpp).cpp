@@ -10,6 +10,7 @@ Line::Line(const Line& l)
 
 	*this = a1=l.a1, b1=l.b1, c1=l.c1, m1=l.m1, n1=l.n1, p1=l.p1;
 }
+
 Line::~Line()
 {
 
@@ -39,7 +40,6 @@ const Line &Line::operator= (const Line &l)
 }
 
 bool Line::intersection(const Line& l)
-
 {
 	return (this.coplanar(l) && (m1/l.m1) == (n1/l.n1) && (n1/l.n1) == (p1/l.p1) && (m1/l.m1) == (p1/l.p1)) ? false : true;
 }

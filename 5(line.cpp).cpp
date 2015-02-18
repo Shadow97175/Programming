@@ -51,7 +51,7 @@ const Line &Line::operator= (const Line &l)
 
 bool Line::intersection(const Line& l)
 {
-	return (this.coplanar(l) && (m1/l.m1) == (n1/l.n1) && (n1/l.n1) == (p1/l.p1) && (m1/l.m1) == (p1/l.p1)) ? false : true;
+	return (this.coplanar(l) && (m1*l.n1-n1*l.m1 != 0 || m1*l.p1-p1*l.m1 != 0 || n1*l.p1-p1*l.n1 != 0)) ? true : false;
 }
 
 bool Line::coplanar(const Line& l)
@@ -61,19 +61,5 @@ bool Line::coplanar(const Line& l)
 
 bool Line::pointOnLine(int x, y, z)
 {
-	return (((x-a1)/m1 == (y-b1)/n1) && ((y-b1)/n1 == (z-c1)/p1) && ((x-a1)/m1 == (z-c1)/p1)) ? true : false;
-}
-
-std::ostream &operator<< (std::ostream &os, const Line &l)
-{
-	if (l.exist)
-	{
-		os << "a1: " << l.a1 << ", b1: " << l.b1 << ", c1: " << l.c1 << ", m1: " << l.m1 << ", n1: " << l.n1 << ", p1: " << l.p1 << "\n";
-		os << "X: " << l.x << ", Y: " << l.y << ", Z: " << l.z << "\n";
-	}
-	else
-	{
-	os << "Прямая не задана.\n";
-	}
-	return os;
+	return (((x-a1)*n1 == (y-b1)*m1) && ((y-b1)*p1 == (z-c1)*n1) && ((x-a1)*p1 == (z-c1)*m1)) ? true : false;
 }

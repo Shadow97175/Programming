@@ -43,6 +43,7 @@ int main()
 			cout << "^" << sameIntCount[i];
 	}
 
+	cout << endl;
 	system("Pause");
 	return 0;
 }

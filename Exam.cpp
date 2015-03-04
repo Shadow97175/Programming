@@ -10,9 +10,17 @@ int main()
 	int* sameIntCount; //массив для подсчета составляющих
 	
 	cin >> N;
+	
+	if(N<1 || N>1000){
+		cout << "Error interval!";
+		return -1;
+	}else if(N==1){
+		cout << "1! = 1";
+		return 0;
+	}
 
 	int* fact = new int[N];
-	for (int i = 0; i < N-1; i++){
+	for (int i = 0; i < N; i++){
 		fact[i] = i + 2;
 		if (sameN==0 && sameInt[i]>N)
 			sameN = i;
@@ -22,7 +30,7 @@ int main()
 
 	cout << N << "! = ";
 
-	for (int i = N - 1; i >= 0; i--){
+	for (int i = N - 2; i >= 0; i--){
 		for (int j = sameN - 1; j >= 0; j--){
 			if (fact[i] >= sameInt[j]){
 				if (fact[i] % sameInt[j] == 0){
@@ -42,8 +50,9 @@ int main()
 		if (sameIntCount[i]>1)
 			cout << "^" << sameIntCount[i];
 	}
-
+	
 	cout << endl;
+
 	system("Pause");
 	return 0;
 }

@@ -11,6 +11,7 @@ int main()
 	
 	cin >> N;
 	
+	//проверка значений
 	if(N<1 || N>1000){
 		cout << "Error interval!";
 		return -1;
@@ -19,6 +20,7 @@ int main()
 		return 0;
 	}
 
+	//заполняем массив с факториалом
 	int* fact = new int[N];
 	for (int i = 0; i < N; i++){
 		fact[i] = i + 2;
@@ -30,6 +32,7 @@ int main()
 
 	cout << N << "! = ";
 
+	//разложение на множители
 	for (int i = N - 2; i >= 0; i--){
 		for (int j = sameN - 1; j >= 0; j--){
 			if (fact[i] >= sameInt[j]){
